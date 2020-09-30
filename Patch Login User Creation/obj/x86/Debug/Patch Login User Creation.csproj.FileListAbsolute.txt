@@ -1,0 +1,22 @@
+E:\Patch Login User Creation\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.LoginUser.resources
+E:\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.Properties.Resources.resources
+E:\Patch Login User Creation\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Patch Login User Creation\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Patch Login User Creation\obj\x86\Debug\Patch Login User Creation.exe
+E:\Patch Login User Creation\obj\x86\Debug\Patch Login User Creation.pdb
+E:\Patch Login User Creation\bin\Debug\Patch Login User Creation.exe
+E:\Patch Login User Creation\bin\Debug\Patch Login User Creation.pdb
+E:\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.atMessageBox.resources
+E:\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.atMessgeBoxWarning.resources
+E:\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.SuccessMessageBox.resources
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.atMessageBox.resources
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.atMessgeBoxWarning.resources
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.LoginUser.resources
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.Properties.Resources.resources
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch_Login_User_Creation.SuccessMessageBox.resources
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch Login User Creation.csproj.GenerateResource.Cache
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch Login User Creation.exe
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\obj\x86\Debug\Patch Login User Creation.pdb
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\bin\Debug\Patch Login User Creation.exe
+D:\SOFTWARES1-ARIF\software from office\Patch Login User Creation\bin\Debug\Patch Login User Creation.pdb

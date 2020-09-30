@@ -1,0 +1,9 @@
+E:\Patch Login User Creation\bin\Debug\Patch Login User Creation.exe
+E:\Patch Login User Creation\bin\Debug\Patch Login User Creation.pdb
+E:\Patch Login User Creation\obj\Debug\ResolveAssemblyReference.cache
+E:\Patch Login User Creation\obj\Debug\Patch_Login_User_Creation.Form1.resources
+E:\Patch Login User Creation\obj\Debug\Patch_Login_User_Creation.Properties.Resources.resources
+E:\Patch Login User Creation\obj\Debug\GenerateResource.read.1.tlog
+E:\Patch Login User Creation\obj\Debug\GenerateResource.write.1.tlog
+E:\Patch Login User Creation\obj\Debug\Patch Login User Creation.exe
+E:\Patch Login User Creation\obj\Debug\Patch Login User Creation.pdb
