@@ -141,17 +141,31 @@ namespace Patch_Login_User_Creation
                 cmd.Parameters.AddWithValue("@type", "REG_DWORD");
                 cmd.Parameters.AddWithValue("@value", 2);
                 cmd.ExecuteNonQuery();
-                SqlCommand cmd2 = new SqlCommand("sp_addsrvrolemember", myConn);
-                cmd2.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd2.Parameters.AddWithValue("@loginame", "atuser");
-                cmd2.Parameters.AddWithValue("@rolename", "sysadmin");
-                cmd2.ExecuteNonQuery();
                 Message1 = 1;
             }
             catch (Exception)
             {
                 throw;
             }
+        }
+        private void ChangeUserAccess()
+        {
+            String str;
+            str = "";
+            using (SqlConnection myConn = new SqlConnection("Server=" + cmbServerName.Text + ";Integrated security=SSPI;database=master;"))
+            ChangeUserRoleSysAdmin(str, myConn);
+        }
+        private void ChangeUserRoleSysAdmin(string str, SqlConnection myConn)
+        {
+            SqlCommand myCommand = new SqlCommand(str, myConn);
+            myConn.Open();
+            myCommand.CommandText = "USE [master]";
+            myCommand.ExecuteNonQuery();
+            SqlCommand cmd2 = new SqlCommand("sp_addsrvrolemember", myConn);
+            cmd2.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd2.Parameters.AddWithValue("@loginame", "atuser");
+            cmd2.Parameters.AddWithValue("@rolename", "sysadmin");
+            cmd2.ExecuteNonQuery();
         }
         private void LoginUserCreation(string str, SqlConnection myConn)
         {
@@ -169,8 +183,8 @@ namespace Patch_Login_User_Creation
                 myCommand.ExecuteNonQuery();
                 myCommand.CommandText = "ALTER ROLE [db_owner] ADD MEMBER [atuser]";
                 myCommand.ExecuteNonQuery();
-                myCommand.CommandText = "ALTER ROLE [sysadmin] ADD MEMBER [atuser]";
-                myCommand.ExecuteNonQuery();
+                //myCommand.CommandText = "ALTER ROLE [sysadmin] ADD MEMBER [atuser]";
+                //myCommand.ExecuteNonQuery();
                 myCommand.CommandText = "USE [model]";
                 myCommand.ExecuteNonQuery();
                 myCommand.CommandText = "CREATE USER [atuser] FOR LOGIN [atuser]";
@@ -347,6 +361,8 @@ namespace Patch_Login_User_Creation
                         myCommand.ExecuteNonQuery();
                         myCommand.CommandText = "ALTER ROLE [db_owner] ADD MEMBER [atuser]";
                         myCommand.ExecuteNonQuery();
+                        myCommand.CommandText = "ALTER SERVER ROLE [sysadmin] ADD MEMBER [atuser]";
+                        myCommand.ExecuteNonQuery();
                         Message2 = 1;
                     }
                 }
@@ -380,7 +396,6 @@ namespace Patch_Login_User_Creation
                 String str;
                 using (SqlConnection myConn = new SqlConnection("Server=" + cmbServerName.Text + ";Integrated security=SSPI;database=master;"))
                 {
-
                     try
                     {
                         str = "";
@@ -389,6 +404,8 @@ namespace Patch_Login_User_Creation
                     catch { }
                     myConn.Close();
                 }
+                RestartSQLService();
+                ChangeUserAccess();
                 RestartSQLService();
                 MessageBoxStatus();
                 SuccessMessageBox.Show(_Message1, _Message2, _Message3, this.Name);
@@ -530,6 +547,9 @@ namespace Patch_Login_User_Creation
                 return;
             }
             RestartSQLService();
+            ChangeUserAccess();
+            RestartSQLService();
+
             if (Message3 == 1)
             {
                 atMessgeBoxWarning.Show("SQL service Restarted sucessfully", "Information");
